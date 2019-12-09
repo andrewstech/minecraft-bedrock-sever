@@ -32,9 +32,9 @@ spec:
             - name: EULA
               value: "TRUE"
             - name: GAMEMODE
-              value: creative
+              value: survival
             - name: DIFFICULTY
-              value: easy
+              value: normal
           volumeMounts:
             - mountPath: /data
               name: data
