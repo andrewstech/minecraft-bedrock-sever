@@ -24,20 +24,7 @@ spec:
       labels:
         app: bds
     spec:
-      containers:
-        - name: bds
-          image: itzg/minecraft-bedrock-server
-          imagePullPolicy: Always
-          env:
-            - name: EULA
-              value: "TRUE"
-            - name: GAMEMODE
-              value: survival
-            - name: DIFFICULTY
-              value: normal
-          volumeMounts:
-            - mountPath: /data
-              name: data
+      containers
         - name: cloudcmd
           image: coderaiser/cloudcmd
           volumeMounts:
@@ -60,20 +47,6 @@ spec:
   selector:
     matchLabels:
       app: bds
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: bds
-spec:
-  selector:
-    app: bds
-  ports:
-    - port: 19132
-      protocol: UDP
-      name: bds 
-  type: LoadBalancer
-
 ---
 apiVersion: v1
 kind: Service
