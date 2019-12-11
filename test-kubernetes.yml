@@ -24,7 +24,8 @@ spec:
       labels:
         app: bds
     spec:
-      containers
+      containers:
+        
         - name: cloudcmd
           image: coderaiser/cloudcmd
           volumeMounts:
@@ -47,6 +48,7 @@ spec:
   selector:
     matchLabels:
       app: bds
+
 ---
 apiVersion: v1
 kind: Service
