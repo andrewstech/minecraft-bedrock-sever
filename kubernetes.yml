@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: bds
-          image: itzg/minecraft-bedrock-server
+          image: codehz/stoneserver
           imagePullPolicy: Always
           env:
             - name: EULA
