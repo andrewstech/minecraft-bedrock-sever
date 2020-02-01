@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: bds
-          image: itzg/minecraft-server
+          image: itzg/minecraft-bedrock-server
           imagePullPolicy: Always
           env:
             - name: EULA
@@ -54,6 +54,6 @@ spec:
   selector:
     app: bds
   ports:
-    - port: 25565
+    - port: 19132
       protocol: UDP
   type: LoadBalancer
